@@ -1,6 +1,6 @@
 package inteface;
 
-public class DayInterestService implements InterestService{
+public class DayInterestServiceImpl implements InterestService{
     private static final double INTEREST_RATE = 0.05;
 
     @Override

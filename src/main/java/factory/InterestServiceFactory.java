@@ -1,20 +1,20 @@
 package factory;
 
-import inteface.DayInterestService;
+import inteface.DayInterestServiceImpl;
 import inteface.InterestService;
-import inteface.NightInterestService;
+import inteface.NightInterestServiceImpl;
 
 import javax.inject.Inject;
 import java.time.LocalTime;
 
 public class InterestServiceFactory {
-    private final DayInterestService dayInterestService;
-    private final NightInterestService nightInterestService;
+    private final DayInterestServiceImpl dayInterestService;
+    private final NightInterestServiceImpl nightInterestService;
 
     @Inject
     public InterestServiceFactory(
-                                  DayInterestService dayInterestService,
-                                  NightInterestService nightInterestService) {
+            DayInterestServiceImpl dayInterestService,
+                                  NightInterestServiceImpl nightInterestService) {
         this.dayInterestService = dayInterestService;
         this.nightInterestService = nightInterestService;
     }

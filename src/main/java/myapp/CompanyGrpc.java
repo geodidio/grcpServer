@@ -2,18 +2,17 @@ package myapp;
 
 import com.acc.grpc.CompanyServiceGrpc;
 import com.acc.grpc.UserProto;
-import inteface.Company;
 import inteface.CompanyServ;
 import inteface.InterestService;
 import io.grpc.stub.StreamObserver;
 
 import javax.inject.Inject;
 
-public class CompanyService extends CompanyServiceGrpc.CompanyServiceImplBase {
+public class CompanyGrpc extends CompanyServiceGrpc.CompanyServiceImplBase {
     private final InterestService interestService;
     private final CompanyServ companyServ;
     @Inject
-    public CompanyService(InterestService interestService, CompanyServ companyServ) {
+    public CompanyGrpc(InterestService interestService, CompanyServ companyServ) {
         this.interestService = interestService;
         this.companyServ = companyServ;
     }

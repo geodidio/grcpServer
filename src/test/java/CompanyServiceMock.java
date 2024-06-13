@@ -1,17 +1,14 @@
-import inteface.Company;
-import inteface.CompanyServ;
+import inteface.CompanyImpl;
 import inteface.InterestService;
-import myapp.CompanyService;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.mockito.junit.MockitoJUnitRunner;
 
 import static org.junit.Assert.assertEquals;
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 // Use MockitoJUnitRunner to initialize mocks
 public class CompanyServiceMock {
@@ -20,7 +17,7 @@ public class CompanyServiceMock {
     @Mock
     private InterestService interestService;
     @InjectMocks
-    private Company companyServ;
+    private CompanyImpl companyServ;
 
 
     @Before
