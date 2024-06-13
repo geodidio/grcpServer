@@ -10,7 +10,6 @@ import io.grpc.stub.StreamObserver;
 import javax.inject.Inject;
 
 public class CompanyService extends CompanyServiceGrpc.CompanyServiceImplBase {
-
     private final InterestService interestService;
     private final CompanyServ companyServ;
     @Inject
